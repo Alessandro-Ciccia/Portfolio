@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Bricolage_Grotesque, IBM_Plex_Sans } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
 import { site } from '@/lib/site';
@@ -128,6 +129,7 @@ export default function RootLayout({
           <main id="main">{children}</main>
           <SiteFooter />
         </div>
+        <Analytics />
       </body>
     </html>
   );
