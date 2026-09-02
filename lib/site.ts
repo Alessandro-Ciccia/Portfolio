@@ -1,24 +1,17 @@
-/**
- * Single source of truth for identity, URLs and contact details.
- * Update the values marked TODO before deploying.
- */
 export const site = {
-  /** TODO: add your surname. */
   name: 'Alessandro',
   role: 'Frontend Developer',
-  /** TODO: replace with your real domain (canonical URLs, sitemap, Open Graph). */
-  url: 'https://example.com',
+  url: 'https://alessandrociccia.com',
   locale: 'en_GB',
   employer: 'MC Engineering',
   consultingAt: 'Reply Group',
   title: 'Alessandro — Frontend Developer',
   description:
     'Frontend Developer',
-  /** TODO: replace with your real contact details. */
   contact: {
-    email: 'alessandro.099@outlook.com',
+    email: 'contact@alessandrociccia.com',
     linkedin: 'https://www.linkedin.com/in/alessandro-ciccia',
-    github: 'https://github.com/your-profile'
+    github: 'https://github.com/Alessandro-Ciccia'
   }
 } as const;
 
