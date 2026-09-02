@@ -1,11 +1,11 @@
 export const site = {
-  name: 'Alessandro',
+  name: 'Alessandro Ciccia',
   role: 'Frontend Developer',
   url: 'https://alessandrociccia.com',
-  locale: 'en_GB',
+  locale: 'it_IT',
   employer: 'MC Engineering',
   consultingAt: 'Reply Group',
-  title: 'Alessandro — Frontend Developer',
+  title: 'Alessandro Ciccia — Frontend Developer',
   description:
     'Frontend Developer',
   contact: {
