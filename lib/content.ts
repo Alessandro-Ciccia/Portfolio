@@ -59,6 +59,37 @@ export const stellantis: CaseStudy = {
   ]
 };
 
+export const unicredit: CaseStudy = {
+  id: 'unicredit',
+  client: 'UniCredit',
+  tagline:
+    'Frontend implementation and maintenance for insurance initiatives and Online Banking experiences.',
+  website: {
+    href: 'https://www.unicredit.it',
+    label: 'unicredit.it'
+  },
+  logo: {
+    src: '/logos/unicredit.png',
+    alt: 'UniCredit logo'
+  },
+  meta: [
+    { label: 'Client', value: 'UniCredit' },
+    { label: 'Role', value: 'Frontend Developer' },
+    { label: 'Context', value: 'Enterprise, banking' },
+    { label: 'Engagement', value: 'Consulting project' },
+    { label: 'Stack', value: 'React, Micro-frontends, CSS' }
+  ],
+  contribution:
+    'Project developed as part of my consulting activity. I worked on React-based micro-frontend applications, contributing to the implementation and maintenance of insurance initiatives and Online Banking features within an enterprise banking platform.',
+  highlights: [
+    'Implementation and maintenance of insurance-related frontend initiatives',
+    'Frontend work on Online Banking experiences',
+    'Development inside a React micro-frontend architecture',
+    'Styling and interface maintenance with base CSS',
+    'Day-to-day evolution of features in an enterprise banking codebase'
+  ]
+};
+
 export const ecosystem = {
   id: 'alpitour-digital-ecosystem',
   title: 'Alpitour Digital Ecosystem',
@@ -154,7 +185,7 @@ export const experience: ExperienceRow[] = [
     detail:
       'Projects delivered as part of my consulting activity, not employment relationships.',
     period: '',
-    tags: ['Stellantis &You', 'Alpitour', 'Eden Viaggi', 'Turisanda']
+    tags: ['Stellantis &You', 'UniCredit', 'Alpitour', 'Eden Viaggi', 'Turisanda']
   }
 ];
 
