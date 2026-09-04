@@ -33,7 +33,7 @@ export function SiteHeader() {
   return (
     <header className="site-header" data-scrolled={scrolled}>
       <div className="container site-header__inner glass">
-        <a className="brand" href="#top">
+        <a className="brand" href="/#top">
           <span className="brand__dot" aria-hidden="true" />
           <span>{site.name}</span>
           <span className="brand__role">{site.role}</span>
