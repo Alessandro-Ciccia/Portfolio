@@ -986,6 +986,133 @@ a {
   line-height: 1.6;
 }
 
+.project-gallery {
+  display: grid;
+  gap: 1rem;
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.project-gallery__item {
+  position: relative;
+  min-height: 14rem;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: var(--glass-shadow);
+  cursor: zoom-in;
+}
+
+.project-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.45s var(--ease), filter 0.45s var(--ease);
+}
+
+.project-gallery__item:hover img,
+.project-gallery__item:focus-visible img {
+  transform: scale(1.02);
+  filter: brightness(1.08);
+}
+
+@media (min-width: 48rem) {
+  .project-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-gallery__item {
+    aspect-ratio: 16 / 11;
+  }
+
+  .project-gallery__item:first-child,
+  .project-gallery__item:nth-child(6n) {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: grid;
+  place-items: center;
+  padding: var(--gutter);
+}
+
+.lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  padding: 0;
+  border: 0;
+  background:
+    radial-gradient(40rem 32rem at 20% 0%, rgba(185, 140, 255, 0.24), transparent 62%),
+    rgba(8, 2, 20, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  cursor: zoom-out;
+}
+
+.lightbox__panel {
+  position: relative;
+  z-index: 1;
+  width: min(92rem, 100%);
+}
+
+.lightbox__panel img {
+  display: block;
+  width: 100%;
+  max-height: 82vh;
+  object-fit: contain;
+  border: 1px solid var(--line-strong);
+  border-radius: 22px;
+  box-shadow: var(--glass-shadow);
+}
+
+.lightbox__close,
+.lightbox__nav {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  background: var(--glass-bg);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.lightbox__close {
+  top: -1.25rem;
+  right: -1.25rem;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.lightbox__nav {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+}
+
+.lightbox__nav--prev {
+  left: -1.5rem;
+}
+
+.lightbox__nav--next {
+  right: -1.5rem;
+}
+
+.lightbox__count {
+  margin-top: 1rem;
+  color: var(--ink-muted);
+  text-align: center;
+}
+
 .markdown h2,
 .markdown h3 {
   margin-top: 1.4rem;

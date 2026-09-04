@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ExternalLink } from '@/components/ExternalLink';
 import { Markdown } from '@/components/Markdown';
+import { ProjectGallery } from '@/components/ProjectGallery';
 import {
   getAllPersonalProjects,
   getPersonalProject
@@ -43,6 +44,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   if (!project) notFound();
 
+  const [contentBeforeGallery, contentAfterGallery] = project.markdown.split('{{gallery}}');
+
   return (
     <article className="container project-page">
       <a className="back-link" href="/#personal-projects">
@@ -78,7 +81,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         />
       </header>
 
-      <Markdown content={project.markdown} />
+      <Markdown content={contentBeforeGallery ?? ''} />
+      <ProjectGallery images={project.screenshots} />
+      {contentAfterGallery ? <Markdown content={contentAfterGallery} /> : null}
     </article>
   );
 }

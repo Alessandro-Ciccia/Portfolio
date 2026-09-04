@@ -4,6 +4,7 @@ summary: A small personal tool for switching and managing Git identities across 
 cover: /projects/gim/cover.png
 coverHasBorder: false
 technologies: [Rust, Tauri, Svelte, TypeScript, Tailwind]
+screenshots: [/projects/gim/overview.png, /projects/gim/profiles.png, /projects/gim/repo.png, /projects/gim/rules.png, /projects/gim/settings.png, /projects/gim/light.png]
 year: 2025
 website: https://gim.alessandrociccia.com
 repository: https://github.com/Alessandro-Ciccia/Git-Identity-Manager
@@ -25,19 +26,7 @@ The goal is to avoid mistakes when moving between personal projects, client work
 
 ## Screens
 
-![Git Identity Manager cover](/projects/gim/cover.png)
-
-![Git Identity Manager overview](/projects/gim/overview.png)
-
-![Git Identity Manager profile management](/projects/gim/profiles.png)
-
-![Git Identity Manager repository configuration](/projects/gim/repo.png)
-
-![Git Identity Manager rules screen](/projects/gim/rules.png)
-
-![Git Identity Manager settings screen](/projects/gim/settings.png)
-
-![Git Identity Manager light theme](/projects/gim/light.png)
+{{gallery}}
 
 ## Notes
 

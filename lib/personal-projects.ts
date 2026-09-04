@@ -8,6 +8,7 @@ export type ProjectMeta = {
   cover: string;
   coverHasBorder: boolean;
   technologies: string[];
+  screenshots: string[];
   year?: string;
   website?: string;
   repository?: string;
@@ -67,6 +68,7 @@ function readProjectFile(fileName: string): PersonalProject {
     cover: data.cover ?? '/projects/placeholder.svg',
     coverHasBorder: data.coverHasBorder !== 'false',
     technologies: parseArray(data.technologies),
+    screenshots: parseArray(data.screenshots),
     year: data.year,
     website: data.website,
     repository: data.repository,
